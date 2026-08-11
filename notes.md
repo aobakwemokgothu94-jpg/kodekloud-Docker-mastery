@@ -1,20 +1,44 @@
-# Level 1 – Deploy Nginx Container
+01 step‑by‑step instructions 
+Verify Docker Installation
+Ensure Docker is installed and running before building the image.
 
-## Step 1: Verify Docker Installation
-```bash
+Run these commands in terminal
+
 docker --version
+
 systemctl status docker
 
-Step 2: Build the Image
-docker build -t my-nginx ./level1/nginx-container
+02
+Build the Image
+Use the Dockerfile to build a custom Nginx image.
 
-Step 3: Run the Container
-docker run -d -p 8080:80 my-nginx
+Execute in project root
 
-Step 4: Test in Browser
-Open: http://localhost:8080
+Navigate to level1/nginx-container
 
-Step 5: Troubleshooting
+Run docker build -t my-nginx ./level1/nginx-container
+
+03
+Run the Container
+Start the container and map port 8080 to 80.
+
+Run docker run -d -p 8080:80 my-nginx
+
+Container runs in background
+
+04
+Test in Browser
+Validation
+Confirm the container is serving your custom page.
+
+Open http://localhost:8080
+
+Page should display 'Hello from Docker Nginx!'
+
+05
+Troubleshooting
+Check logs and container status if issues occur.
+
 Logs: docker logs <container_id>
 
 Restart: docker restart <container_id>
