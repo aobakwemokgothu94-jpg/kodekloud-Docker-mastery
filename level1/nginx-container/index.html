@@ -8,3 +8,6 @@
     <p>This page is served from a container.</p>
   </body>
 </html>
+
+docker build -t my-nginx ./level1/nginx-container
+docker run -d -p 8080:80 my-nginx
