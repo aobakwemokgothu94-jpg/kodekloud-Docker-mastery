@@ -1,0 +1,54 @@
+# Level 2 – Docker Intermediate
+
+This section builds on the basics from Level 1 and introduces more advanced Docker concepts: networking, volumes, multi‑container orchestration, environment configuration, and automation.
+
+---
+
+## 📂 Tasks Overview
+
+### Task 1 – Container Networking
+- Create custom Docker networks
+- Connect multiple containers (e.g., Nginx + BusyBox)
+- Verify communication with `ping` or `wget`
+
+### Task 2 – Persistent Volumes
+- Use `docker volume create` to persist data
+- Mount volumes into containers
+- Verify persistence after container removal
+
+### Task 3 – Multi‑Container Setup with Docker Compose
+- Define multiple services in `docker-compose.yml`
+- Run with `docker-compose up -d`
+- Manage lifecycle with `docker-compose down`
+- Persist data with named volumes
+
+### Task 4 – Environment Variables
+- Pass variables with `-e` flag
+- Configure services dynamically
+- Use `.env` files for externalized configs
+
+### Task 5 – Restart Policies
+- Apply `--restart` flags (`always`, `on-failure`, `unless-stopped`)
+- Ensure containers auto‑restart after crashes or Docker restarts
+- Inspect restart policies with `docker inspect`
+
+---
+
+## 🚀 Key Commands Recap
+- `docker network create` → networking  
+- `docker volume create` → persistent storage  
+- `docker-compose up -d` → orchestration  
+- `docker run -e VAR=value` → environment variables  
+- `docker run --restart=always` → restart automation  
+
+---
+
+## ✅ Learning Outcomes
+By completing Level 2, you now know how to:
+- Connect containers with custom networks  
+- Persist data using volumes  
+- Orchestrate multi‑container apps with Docker Compose  
+- Configure containers with environment variables  
+- Automate container lifecycle with restart policies  
+
+---
