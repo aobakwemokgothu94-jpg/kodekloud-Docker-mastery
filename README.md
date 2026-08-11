@@ -1,6 +1,5 @@
-# kodekloud-Docker-mastery
+# kodekloud-Docker-mastery 🚀
 “Practice projects and Dockerfiles from KodeKloud Docker Mastery labs, including container deployments, troubleshooting, and automation.”
-# KodeKloud Docker Mastery 🚀
 
 This repository documents my Docker learning journey through KodeKloud Engineer practice challenges.  
 I’ve completed **Level 1 → Level 4**, earning Docker medals and certificates along the way.
