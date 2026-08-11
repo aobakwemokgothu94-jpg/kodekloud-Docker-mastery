@@ -20,6 +20,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Only include this if you actually have an artifact uploaded in another job
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact   # must match the name used in upload step
+          path: ./artifact-dir
+
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
         with:
@@ -32,10 +39,3 @@ jobs:
 
       - name: Push Docker image
         run: docker push $REGISTRY/$IMAGE_NAME:latest
-- name: Download a Build Artifact
-  uses: actions/download-artifact@v3.1.0
-  with:
-    # Artifact name
-    name: # optional
-    # Destination path
-    path: # optional
