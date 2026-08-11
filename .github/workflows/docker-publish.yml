@@ -3,9 +3,6 @@ name: Docker Publish
 on:
   push:
     branches: [ "main" ]
-    tags: [ 'v*.*.*' ]
-  pull_request:
-    branches: [ "main" ]
 
 env:
   REGISTRY: ghcr.io
@@ -30,38 +27,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Level 1
-      - name: Build Level 1 image
-        run: docker build ./level1/nginx-container \
-             -f ./level1/nginx-container/Dockerfile \
-             -t $REGISTRY/$IMAGE_NAME:level1
+      - name: Build Docker image
+        run: docker build ./level1/nginx-container -f ./level1/nginx-container/Dockerfile -t $REGISTRY/$IMAGE_NAME:latest
 
-      - name: Push Level 1 image
-        run: docker push $REGISTRY/$IMAGE_NAME:level1
-
-      # Level 2
-      - name: Build Level 2 image
-        run: docker build ./level2/dockerfile \
-             -f ./level2/dockerfile/Dockerfile \
-             -t $REGISTRY/$IMAGE_NAME:level2
-
-      - name: Push Level 2 image
-        run: docker push $REGISTRY/$IMAGE_NAME:level2
-
-      # Level 3
-      - name: Build Level 3 image
-        run: docker build ./level3 \
-             -f ./level3/Dockerfile \
-             -t $REGISTRY/$IMAGE_NAME:level3
-
-      - name: Push Level 3 image
-        run: docker push $REGISTRY/$IMAGE_NAME:level3
-
-      # Level 4
-      - name: Build Level 4 image
-        run: docker build ./level4 \
-             -f ./level4/Dockerfile \
-             -t $REGISTRY/$IMAGE_NAME:level4
-
-      - name: Push Level 4 image
-        run: docker push $REGISTRY/$IMAGE_NAME:level4
+      - name: Push Docker image
+        run: docker push $REGISTRY/$IMAGE_NAME:latest
