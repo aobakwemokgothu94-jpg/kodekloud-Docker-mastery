@@ -1,8 +1,5 @@
 # kodekloud-Docker-mastery
 “Practice projects and Dockerfiles from KodeKloud Docker Mastery labs, including container deployments, troubleshooting, and automation.”
-# KodeKloud Docker Mastery
-
-This repository contains Docker practice projects and labs completed as part of the KodeKloud Docker Mastery track.
 
 ## Contents
 - **Nginx Web Server**
