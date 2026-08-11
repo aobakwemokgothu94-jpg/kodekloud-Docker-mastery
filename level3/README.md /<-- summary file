@@ -1,1 +1,57 @@
+# Level 3 – Advanced Docker
+
+This section covers advanced Docker concepts: orchestration with Swarm, security best practices, performance optimization, private registries, and monitoring/logging.
+
+---
+
+## 📂 Tasks Overview
+
+### Task 1 – Docker Swarm
+- Initialize a Swarm cluster
+- Deploy services across multiple nodes
+- Scale services with `docker service scale`
+
+### Task 2 – Docker Security
+- Run containers as non-root users
+- Limit capabilities and use read-only filesystems
+- Scan images for vulnerabilities
+- Manage secrets securely
+
+### Task 3 – Docker Optimization
+- Use multi-stage builds to shrink image size
+- Apply resource limits (`--cpus`, `--memory`)
+- Optimize Dockerfile for caching
+- Prefer lightweight base images
+
+### Task 4 – Docker Registry
+- Set up a private registry
+- Tag, push, and pull images
+- Manage authentication and access control
+
+### Task 5 – Monitoring & Logging
+- Monitor resources with `docker stats`
+- View logs with `docker logs`
+- Centralize logging with ELK/EFK stack
+- Collect metrics with Prometheus and visualize in Grafana
+
+---
+
+## 🚀 Key Commands Recap
+- `docker swarm init` → start Swarm  
+- `docker service create` → deploy services  
+- `docker scan` → security scanning  
+- `docker build --target` → multi-stage builds  
+- `docker login` → authenticate to registry  
+- `docker stats` → monitor resources  
+
+---
+
+## ✅ Learning Outcomes
+- Orchestrate containers across clusters with Swarm  
+- Apply security best practices to images and containers  
+- Optimize performance and resource usage  
+- Manage private registries for image distribution  
+- Monitor and log container activity effectively  
+
+---
 
